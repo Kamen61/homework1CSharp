@@ -65,11 +65,27 @@
 //5 -> 2, 4
 //8 -> 2, 4, 6, 8
 
-Console.Write("Введите число : ");
-int N = Convert.ToInt32(Console.ReadLine());
-int integer=0;
-while (integer<(N-2))
+//Console.Write("Введите число : ");
+//int N = Convert.ToInt32(Console.ReadLine());
+//int integer=0;
+//while (integer<(N-2))
+//{
+//    integer=integer+2;
+//    Console.Write(integer + ",");
+//}
+
+
+// Задача из семинара 
+// Напишите программу которая принимает на вход трехзначное число и на выходе показывает последнюю цифру этого числа 
+
+Console.Write("Введите трехзначное число : ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number>100 && number<999)
 {
-    integer=integer+2;
-    Console.Write(integer + ",");
+    int LastDigit = number % 10;
+    Console.WriteLine(LastDigit);
+}
+else
+{
+    Console.WriteLine("Вы ввели не корректное число, поробуйте еще раз");
 }
